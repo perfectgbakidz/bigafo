@@ -27,6 +27,7 @@ const Header: React.FC = () => {
           <NavLink href="#home">Home</NavLink>
           <NavLink href="#declaration">About</NavLink>
           <NavLink href="#manifesto">Manifesto</NavLink>
+          <NavLink href="#gallery">Gallery</NavLink>
           <NavLink href="#connect">Connect</NavLink>
         </nav>
 
@@ -44,6 +45,7 @@ const Header: React.FC = () => {
             <NavLink href="#home" >Home</NavLink>
             <NavLink href="#declaration">About</NavLink>
             <NavLink href="#manifesto">Manifesto</NavLink>
+            <NavLink href="#gallery">Gallery</NavLink>
             <NavLink href="#connect">Connect</NavLink>
           </nav>
         </div>

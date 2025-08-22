@@ -20,7 +20,7 @@ const Hero: React.FC = () => {
       <div className="container mx-auto px-6 relative z-10 flex flex-col md:flex-row items-center py-12 md:py-0">
         <div className="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black uppercase tracking-tight leading-tight mb-4">
-            <span className="text-mapoly-gold">Temitope Afolabi (Big Afo)</span> FOR SU PRESIDENT
+            <span className="text-mapoly-gold">Temitope Afolabi (Big Afo)</span> FOR SUG PRESIDENT
           </h1>
           <p className="text-lg sm:text-xl lg:text-2xl font-light mb-8">
             Leadership with Purpose. Progress for All.

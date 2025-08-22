@@ -6,6 +6,7 @@ import Declaration from './components/Declaration';
 import Experience from './components/Experience';
 import Manifesto from './components/Manifesto';
 import FlyerGenerator from './components/FlyerGenerator';
+import Gallery from './components/Gallery';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
 
@@ -19,6 +20,7 @@ function App() {
         <Experience />
         <Manifesto />
         <FlyerGenerator />
+        <Gallery />
         <CTA />
       </main>
       <Footer />

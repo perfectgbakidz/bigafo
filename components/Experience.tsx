@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const leadershipRoles = [
@@ -25,7 +24,7 @@ const Experience: React.FC = () => {
     <section id="experience" className="py-20 bg-mapoly-light">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto text-lg text-gray-700 leading-relaxed text-center">
-            <img src="https://i.imgur.com/RXcLlgp.png" alt="Leadership Experience" className="mx-auto h-32 w-32 md:h-48 md:w-48 object-contain mb-6" />
+            <img src="https://i.imgur.com/vv7e0S0.jpeg" alt="Moshood Abiola Polytechnic campus" className="mx-auto h-32 w-32 md:h-48 md:w-48 object-contain mb-6" />
             <h2 className="text-3xl md:text-4xl font-bold text-mapoly-green mb-4">
             My Experience in Student Leadership
             </h2>
