@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
           </div>
           <div className="text-center md:text-right">
             <p className="font-semibold text-mapoly-green text-lg">
-              VOTE Temitope Afolabi (Big Afo) FOR SU PRESIDENT
+              VOTE Temitope Afolabi (Big Afo) FOR SUG PRESIDENT
             </p>
             <p className="text-gray-600 text-sm mt-1">
               &copy; {currentYear} Temitope Afolabi (Big Afo) Campaign Team. All Rights Reserved.
