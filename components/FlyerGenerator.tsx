@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 // An icon representing design/generation tools
 const GeneratorIcon: React.FC = () => (
@@ -18,8 +18,15 @@ const FlyerGenerator: React.FC = () => {
     const [userImagePreview, setUserImagePreview] = useState<string | null>(null);
     const [isLoading, setIsLoading] = useState(false);
     const [isGenerated, setIsGenerated] = useState(false);
+    const [canShare, setCanShare] = useState(false);
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const fileInputRef = useRef<HTMLInputElement>(null);
+
+    useEffect(() => {
+        if (navigator.share) {
+            setCanShare(true);
+        }
+    }, []);
     
     const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setName(e.target.value);
@@ -181,6 +188,39 @@ const FlyerGenerator: React.FC = () => {
         }
     };
 
+    const shareFlyer = async () => {
+        const canvas = canvasRef.current;
+        if (!canvas || !isGenerated) {
+            alert('Please generate the flyer first before sharing.');
+            return;
+        }
+
+        canvas.toBlob(async (blob) => {
+            if (!blob) {
+                alert('Sorry, there was an error creating the image for sharing.');
+                return;
+            }
+
+            const file = new File([blob], 'big-afo-support-flyer.png', { type: 'image/png' });
+            const shareData = {
+                files: [file],
+                title: 'Support Big Afo for SUG President!',
+                text: 'I\'m supporting Temitope Afolabi (Big Afo) for SUG President. Let\'s build a better MAPOLY together! #BigAfoForPresident',
+            };
+
+            if (navigator.canShare && navigator.canShare(shareData)) {
+                try {
+                    await navigator.share(shareData);
+                } catch (error) {
+                    // This error is thrown if the user cancels the share dialog, so we can safely ignore it.
+                    console.log('Share was cancelled or failed', error);
+                }
+            } else {
+                alert('Your browser does not support this share feature. Please download the image to share it.');
+            }
+        }, 'image/png');
+    };
+
   return (
     <section id="support" className="py-20 bg-white">
       <div className="container mx-auto px-6">
@@ -239,6 +279,17 @@ const FlyerGenerator: React.FC = () => {
                     >
                         {isLoading ? 'Generating...' : 'Generate Flyer'}
                     </button>
+                    
+                    {canShare && (
+                        <button
+                            onClick={shareFlyer}
+                            disabled={!isGenerated}
+                            className="w-full bg-mapoly-green text-white font-bold py-3 px-8 rounded-full text-lg uppercase hover:bg-opacity-90 transition duration-300 disabled:bg-gray-300 disabled:cursor-not-allowed"
+                        >
+                            Share Flyer
+                        </button>
+                    )}
+
                     <button
                         onClick={downloadFlyer}
                         disabled={!isGenerated}
