@@ -9,8 +9,6 @@ const GeneratorIcon: React.FC = () => (
 
 const CANDIDATE_IMAGE_URL = "https://i.imgur.com/rDlcM5I.png";
 const TEAM_LOGO_URL = "https://i.imgur.com/EVVtFJD.png";
-// New Icons
-const CHECKMARK_ICON_URL = "https://i.imgur.com/2YcQY2Y.png";
 const CANVAS_WIDTH = 1080;
 const CANVAS_HEIGHT = 1080;
 
@@ -71,10 +69,9 @@ const FlyerGenerator: React.FC = () => {
         }
 
         try {
-            const [candidateImg, teamLogoImg, checkmarkImg] = await Promise.all([
+            const [candidateImg, teamLogoImg] = await Promise.all([
                 loadImage(CANDIDATE_IMAGE_URL),
                 loadImage(TEAM_LOGO_URL),
-                loadImage(CHECKMARK_ICON_URL),
             ]);
 
             // Clear canvas and draw background
@@ -154,18 +151,8 @@ const FlyerGenerator: React.FC = () => {
             ctx.font = '900 80px Inter, sans-serif';
             ctx.fillStyle = '#FFD700';
             const candidateNameText = 'Temitope Afolabi';
-            const textMetrics = ctx.measureText(candidateNameText);
             ctx.fillText(candidateNameText, 50, 800);
             
-            // Voting Box and checkmark
-            const boxX = 50 + textMetrics.width + 30;
-            const boxY = 800 - 70; // Vertically align with 80px font
-            const boxSize = 90;
-            ctx.strokeStyle = '#FFD700';
-            ctx.lineWidth = 8;
-            ctx.strokeRect(boxX, boxY, boxSize, boxSize);
-            ctx.drawImage(checkmarkImg, boxX + 10, boxY + 10, boxSize - 20, boxSize - 20);
-
             ctx.fillStyle = '#FFFFFF';
             ctx.font = '600 50px Inter, sans-serif';
             ctx.fillText('(Big Afo)', 50, 870);

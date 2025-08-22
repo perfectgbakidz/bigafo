@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 interface ManifestoPointProps {
@@ -8,7 +7,7 @@ interface ManifestoPointProps {
 }
 
 const ManifestoPoint: React.FC<ManifestoPointProps> = ({ icon, title, description }) => (
-  <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 h-full">
+  <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 h-full flex flex-col">
     <div className="text-mapoly-gold mb-4">
       {icon}
     </div>
@@ -17,38 +16,32 @@ const ManifestoPoint: React.FC<ManifestoPointProps> = ({ icon, title, descriptio
   </div>
 );
 
-const AdvocacyIcon = () => <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" /></svg>;
 const WelfareIcon = () => <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>;
 const OpportunitiesIcon = () => <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>;
-const SocialIcon = () => <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>;
 const LeadershipIcon = () => <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" /></svg>;
+const PragmatismIcon = () => <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" /></svg>;
 
 const manifestoData = [
     {
-        icon: <AdvocacyIcon />,
-        title: "Advocacy and Accountability",
-        description: "Restore trust in the Union with open communication and transparent operations, becoming a reliable voice for all students (SDG 16: Peace, Justice, and Strong Institutions)."
+        icon: <LeadershipIcon />,
+        title: "Accountability",
+        description: "I believe leadership should be about real actions, not empty promises. I will work with transparency, and every step I take will be open for student scrutiny. You deserve a leader who doesn’t just talk — but one who listens, plans, and delivers practical results.",
+    },
+     {
+        icon: <PragmatismIcon />,
+        title: "Pragmatism",
+        description: "I promise to approach and tackle problems faced by the students' populace with flexibility while putting in consideration the students' interest and request."
     },
     {
         icon: <WelfareIcon />,
         title: "Functional Welfarism",
-        description: "Prioritize student well-being by improving access to healthcare, securing transportation, and ensuring conducive hostel conditions (SDG 3: Good Health and Well-being)."
+        description: "Student welfare is not a luxury — it’s a right. From hostel conditions to campus safety and mental health awareness, my administration will push for functional structures that truly serve the needs of every student. I’m here to ensure no one is left behind."
     },
     {
         icon: <OpportunitiesIcon />,
-        title: "Opportunities for Development",
-        description: "Create avenues for growth through trainings, workshops, and enterprise programs to equip students for life beyond campus (SDG 4: Quality Education & SDG 8: Economic Growth)."
-    },
-    {
-        icon: <SocialIcon />,
-        title: "Vibrant Social and Sporting Life",
-        description: "Rejuvenate campus life through inclusive events, cultural activities, and sports development to foster a connected student community (SDG 10: Reduced Inequalities)."
-    },
-    {
-        icon: <LeadershipIcon />,
-        title: "Effective and Inclusive Leadership",
-        description: "Foster a union where every student feels heard and represented through teamwork, decentralization, and responsive leadership (SDG 16: Inclusive Institutions)."
-    },
+        title: "Opportunity Development",
+        description: "MAPOLY is full of talented and visionary youths. I will work to create skill-based programs, workshops, tech exposure, and entrepreneurial platforms that help us not just graduate, but succeed beyond school. You deserve access, and I will fight for that access."
+    }
 ];
 
 const Manifesto: React.FC = () => {
@@ -58,26 +51,24 @@ const Manifesto: React.FC = () => {
         <div className="text-center mb-12">
           <img src="https://i.imgur.com/te7TqnX.png" alt="AFO Vision 2025" className="mx-auto h-32 w-32 md:h-48 md:w-48 object-contain mb-6" />
           <h2 className="text-3xl md:text-4xl font-bold text-mapoly-green mb-4">
-            AFO Vision 2025: Five-Point Agenda
+            AFO Vision 2025: My Commitment
           </h2>
           <div className="w-24 h-1 bg-mapoly-gold mx-auto"></div>
-          <p className="max-w-3xl mx-auto mt-4 text-gray-600">
-             A student-centered development framework that aligns with Students Oriented and Sustainable Development Goals (SDGs) and seeks to create meaningful impact on campus.
-          </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
-          {manifestoData.slice(0, 3).map((item, index) => (
-            <ManifestoPoint key={index} icon={item.icon} title={item.title} description={item.description} />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {manifestoData.map((item, index) => (
+            <ManifestoPoint 
+                key={index} 
+                icon={item.icon} 
+                title={item.title} 
+                description={item.description}
+            />
           ))}
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8 lg:max-w-4xl lg:mx-auto">
-             {manifestoData.slice(3).map((item, index) => (
-                <div key={index+3} className="lg:flex lg:justify-center">
-                     <div className="lg:w-full">
-                        <ManifestoPoint icon={item.icon} title={item.title} description={item.description} />
-                    </div>
-                </div>
-            ))}
+         <div className="text-center mt-16 max-w-3xl mx-auto">
+            <p className="text-2xl font-semibold text-gray-800 italic leading-relaxed">
+                "This is not just about me. It’s about us. Let’s write a new chapter where student government truly works for students."
+            </p>
         </div>
       </div>
     </section>

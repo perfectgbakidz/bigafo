@@ -10,6 +10,9 @@ const galleryImages = [
     { src: "https://i.imgur.com/yfJqMYO.jpg", alt: "Big Afo speaking at an event" },
     { src: "https://i.imgur.com/RXcLlgp.jpg", alt: "Big Afo engaging with students" },
     { src: "https://i.imgur.com/rUmoQsS.jpg", alt: "Campaign team photo" },
+    { src: "https://i.imgur.com/AYUA1Ds.jpeg", alt: "Temitope Afolabi (Big Afo) in a thoughtful pose" },
+    { src: "https://i.imgur.com/YaFrz4u.jpeg", alt: "Temitope Afolabi (Big Afo) campaign photo" },
+    { src: "https://i.imgur.com/topeTys.jpeg", alt: "A professional headshot of Temitope Afolabi (Big Afo)" },
 ];
 
 const GalleryIcon: React.FC = () => (

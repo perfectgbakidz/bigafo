@@ -1,9 +1,8 @@
-
 import React from 'react';
 import { FacebookIcon, TwitterIcon, InstagramIcon } from './IconComponents';
 
 // IMPORTANT: Replace this with your actual WhatsApp group link
-const WHATSAPP_GROUP_LINK = "https://chat.whatsapp.com/your_group_invite_code";
+const WHATSAPP_GROUP_LINK = "https://chat.whatsapp.com/BNeGkYDgPODLyFMwOway94?mode=ems_copy_t";
 
 const SocialLink: React.FC<{ href: string; children: React.ReactNode }> = ({ href, children }) => (
     <a href={href} target="_blank" rel="noopener noreferrer" className="text-white hover:text-mapoly-gold transition duration-300">
