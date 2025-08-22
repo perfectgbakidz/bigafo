@@ -1,7 +1,8 @@
-
 import React, { useState } from 'react';
 
-const MAPOLY_LOGO_URL = "https://i.imgur.com/J2esTQx.png"; // Updated MAPOLY Logo
+const MAPOLY_LOGO_URL = "https://i.imgur.com/J2esTQx.png";
+const SU_LOGO_URL = "https://i.imgur.com/N8BCRaf.png";
+const TEAM_LOGO_URL = "https://i.imgur.com/EVVtFJD.png";
 
 const NavLink: React.FC<{ href: string; children: React.ReactNode }> = ({ href, children }) => (
   <a href={href} className="text-gray-700 hover:text-mapoly-green font-semibold transition duration-300">
@@ -14,10 +15,12 @@ const Header: React.FC = () => {
 
   return (
     <header className="bg-white/80 backdrop-blur-md shadow-md sticky top-0 z-50">
-      <div className="container mx-auto px-6 py-3 flex justify-between items-center">
-        <div className="flex items-center space-x-3">
-          <img src={MAPOLY_LOGO_URL} alt="MAPOLY Logo" className="h-12 w-12 object-contain"/>
-          <span className="font-bold text-lg text-mapoly-green">MAPOLY CAMPAIGN</span>
+      <div className="container mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
+        <div className="flex items-center space-x-2">
+          <img src={MAPOLY_LOGO_URL} alt="MAPOLY Logo" className="h-10 w-10 md:h-12 md:w-12 object-contain"/>
+          <img src={SU_LOGO_URL} alt="SUG Logo" className="h-10 w-10 md:h-12 md:w-12 object-contain"/>
+          <img src={TEAM_LOGO_URL} alt="Team AFO Logo" className="h-10 w-10 md:h-12 md:w-12 object-contain"/>
+          <span className="font-bold text-sm sm:text-base md:text-lg text-mapoly-green whitespace-nowrap">Big Afo SUG Campaign</span>
         </div>
 
         <nav className="hidden md:flex space-x-8">
