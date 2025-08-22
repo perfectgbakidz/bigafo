@@ -56,6 +56,7 @@ const Manifesto: React.FC = () => {
     <section id="manifesto" className="py-20 bg-mapoly-light">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
+          <img src="https://i.imgur.com/te7TqnX.png" alt="AFO Vision 2025" className="mx-auto h-32 w-32 md:h-48 md:w-48 object-contain mb-6" />
           <h2 className="text-3xl md:text-4xl font-bold text-mapoly-green mb-4">
             AFO Vision 2025: Five-Point Agenda
           </h2>

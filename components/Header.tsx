@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 
-const MAPOLY_LOGO_URL = "https://www.mapoly.edu.ng/wp-content/uploads/2022/02/cropped-MAPOLY-LOGO-1-1.png"; // Replace with actual URL if different
+const MAPOLY_LOGO_URL = "https://i.imgur.com/J2esTQx.png"; // Updated MAPOLY Logo
 
 const NavLink: React.FC<{ href: string; children: React.ReactNode }> = ({ href, children }) => (
   <a href={href} className="text-gray-700 hover:text-mapoly-green font-semibold transition duration-300">
@@ -22,7 +22,7 @@ const Header: React.FC = () => {
 
         <nav className="hidden md:flex space-x-8">
           <NavLink href="#home">Home</NavLink>
-          <NavLink href="#about">About</NavLink>
+          <NavLink href="#declaration">About</NavLink>
           <NavLink href="#manifesto">Manifesto</NavLink>
           <NavLink href="#connect">Connect</NavLink>
         </nav>
@@ -39,7 +39,7 @@ const Header: React.FC = () => {
         <div className="md:hidden bg-white shadow-lg">
           <nav className="flex flex-col items-center space-y-4 py-4">
             <NavLink href="#home" >Home</NavLink>
-            <NavLink href="#about">About</NavLink>
+            <NavLink href="#declaration">About</NavLink>
             <NavLink href="#manifesto">Manifesto</NavLink>
             <NavLink href="#connect">Connect</NavLink>
           </nav>

@@ -15,6 +15,7 @@ const CTA: React.FC = () => {
   return (
     <section id="connect" className="py-20 bg-mapoly-green">
       <div className="container mx-auto px-6 text-center text-white">
+        <img src="https://i.imgur.com/OEzvcWz.png" alt="Connect with us" className="mx-auto h-32 w-32 md:h-48 md:w-48 object-contain mb-6" />
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
           Support Big Afo for SUG President
         </h2>
